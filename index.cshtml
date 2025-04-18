@@ -32,6 +32,13 @@
             <input type="text" placeholder="Search..." onkeypress="if(event.key === 'Enter') { /* Add your search logic here */ }">
         </div>
             <div class="dropdown">
+                <a id="dropdown-trigger"><button>Settings</button></a>
+                <div id="dropdown-menu" class="dropdown-menu">
+                    <a href="#">Profile</a>
+                    <a href="#">Preferences</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
                 <a id="dropdown-trigger"><button>Cart</button></a>
                 <div id="dropdown-menu" class="dropdown-menu">
                     <a href="#">View Cart</a>
@@ -39,14 +46,6 @@
                     <a href="#">Order History</a>
                 </div>
             </div>  
-        <div class="dropdown">
-            <a id="dropdown-trigger"><button>Settings</button></a>
-            <div id="dropdown-menu" class="dropdown-menu">
-                <a href="#">Profile</a>
-                <a href="#">Preferences</a>
-                <a href="#">Logout</a>
-            </div>
-        </div>
     </header>
     <main>
 
