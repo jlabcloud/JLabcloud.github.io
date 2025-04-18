@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Guide</title>
+</head>
+<body>
+    <h1>Before We Begin</h1>
+    <ul>
+        <li>Tools and features do not need to be installed on the same server for communication.</li>
+        <li><strong>Personal Preferences</strong>:
+            <ul>
+                <li>Organization is key!</li>
+                <li>Use specific bookmarks for certain browsers.</li>
+                <li>Set up shared directories to avoid redundant file paths (e.g., in VS Code) and downloads (e.g., ISOs or other files).</li>
+            </ul>
+        </li>
+    </ul>
+    <p>
+        If any free trials are available for any cloud providers, using this guide first will hopefully be extremely helpful by assisting in set up so there can be more focus on a development environment and integrations in a multi-cloud environment.
+    </p>
+    <p>
+        Windows Server (6mo eval) + Azure (30day $200cred) <br>
+        Google Cloud Platform (3mo $300cred) <br>
+        Amazon Web Services (VPS 3mo, EC2 12mo, certain services 12mo)
+    </p>
+    <hr>
+    <h2><a href="https://github.com/JesseDev3/linux/blob/main/el9_setup.md">Enterprise Linux 9</a></h2>
+    <p>For a quickstart, you can copy and paste:</p>
+    <pre>
+<code>
+$ curl -fsSL https://raw.githubusercontent.com/JesseDev3/linux/refs/heads/main/el9_setup.sh -o el9_setup.sh
+$ sudo bash el9_setup.sh
+</code>
+    </pre>
+    <hr>
+    <h2><a href="https://github.com/JesseDev3/linux/blob/main/el9_net.md">Networking</a></h2>
+    <pre>
+<code>
+$ curl -fsSL https://raw.githubusercontent.com/JesseDev3/linux/refs/heads/main/el9_net.sh -o el9_net.sh
+$ sudo bash el9_net.sh
+</code>
+    </pre>
+    <hr>
+    <h2><a href="https://github.com/JesseDev3/linux/blob/main/el9_db.md">Database</a></h2>
+    <pre>
+<code>
+$ curl -fsSL https://raw.githubusercontent.com/JesseDev3/linux/refs/heads/main/el9_db.sh -o el9_db.sh
+$ sudo bash el9_db.sh
+</code>
+    </pre>
+    <hr>
+    <h2><a href="https://github.com/JesseDev3/linux/blob/main/el9_sec.md">Security</a></h2>
+    <pre>
+<code>
+$ curl -fsSL https://raw.githubusercontent.com/JesseDev3/linux/refs/heads/main/el9_sec.sh -o el9_sec.sh
+$ sudo bash el9_sec.sh
+</code>
+    </pre>
+    <hr>
+    <h2><a href="https://github.com/JesseDev3/linux/blob/main/el9_mtt.md">Monitoring Tuning & Tracing</a></h2>
+    <pre>
+<code>
+$ curl -fsSL https://raw.githubusercontent.com/JesseDev3/linux/refs/heads/main/el9_mtt.sh -o el9_mtt.sh
+$ sudo bash el9_mtt.sh
+</code>
+    </pre>
+</body>
+</html>
