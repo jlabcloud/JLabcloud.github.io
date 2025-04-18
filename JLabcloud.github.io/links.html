@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLabs</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+        <div class="banner">
+            <h1>Welcome to JLabs</h1>
+        </div>
+    <header> 
+        <div class="dropdown">
+            <a id="dropdown-trigger"><button>JLabs Logo</button></a>
+            <div id="dropdown-menu" class="dropdown-menu">
+                <a href="links.html">Links</a>
+                <a href="linux.html">Linux</a>
+                <a href="kube.md">Kubernetes</a>
+                <a href="Rhel9.md">RHEL 9</a>
+                <a href="Tyme/tyme.md">Tyme Doc</a>
+                <a href="Tyme/tyme.html">Tyme</a>
+            </div>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." onkeypress="if(event.key === 'Enter') { /* Add your search logic here */ }">
+        </div>
+            <div class="dropdown">
+                <a id="dropdown-trigger"><button>Cart</button></a>
+                <div id="dropdown-menu" class="dropdown-menu">
+                    <a href="#">View Cart</a>
+                    <a href="#">Checkout</a>
+                    <a href="#">Order History</a>
+                </div>
+            </div>  
+        <div class="dropdown">
+            <a id="dropdown-trigger"><button>Settings</button></a>
+            <div id="dropdown-menu" class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Preferences</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+        <div class="card">
+            <h2>Work</h2>
+            <p>
+                <a href="https://mytime.target.com/" target="_blank" rel="noopener noreferrer"><button>MyTime</button></a>
+                <a href="https://wd5.myworkday.com/target" target="_blank" rel="noopener noreferrer"><button>Workday</button></a>
+                <a href="https://greenfield.target.com" target="_blank" rel="noopener noreferrer"><button>Greenfield</button></a>
+                <a href="https://mickra.target.com" target="_blank" rel="noopener noreferrer"><button>Mickra</button></a>
+                <a href="https://salesforce.target.com" target="_blank" rel="noopener noreferrer"><button>Salesforce</button></a>
+                <a href="https://servicenow.target.com" target="_blank" rel="noopener noreferrer"><button>Service Now</button></a>
+            </p>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="card2">
+                <h2>Linux Distributions</h2>
+                <select onchange="location = this.value;">
+                <option value="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat</option>
+                <option value="https://www.centos.org/">CentOS</option>
+                <option value="https://www.debian.org/">Debian</option>
+                <option value="https://www.ubuntu.com/">Ubuntu</option>
+                <option value="https://www.suse.com/">SUSE</option>
+                <option value="https://www.fedoraproject.org/">Fedora</option>
+                <option value="https://www.kali.org/">Kali</option>
+                <option value="https://www.freebsd.org/">FreeBSD</option>
+            </select>
+        </div>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="card2">
+                <h2>Developer Tools</h2>
+                    <select onchange="location = this.value;">
+                        <option value="https://react.dev/learn">Podman</option>
+                        <option value="https://react.dev/learn">React</option>
+                        <option value="https://go.dev/">K8s</option>
+                        <option value="https://k8s.io">K8s</option>
+                        <option value="https://k8s.gcr.io">GCR</option>
+                        <option value="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#api-overview-v1">API Overview</option>
+                    </select>
+            </div>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="card2">
+                <h2>Networking</h2>
+                <p>
+                    <a href="https://tailscale.com/" target="_blank" rel="noopener noreferrer"><button>Tailscale</button></a>
+                    <a href="https://www.pfsense.org/" target="_blank" rel="noopener noreferrer"><button>pfSense</button></a>
+                    <a href="https://www.opnsense.org/" target="_blank" rel="noopener noreferrer"><button>OPNsense</button></a>
+                    <a href="https://www.openwrt.org/" target="_blank" rel="noopener noreferrer"><button>OpenWRT</button></a>
+                </p>
+            </div>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+            <div class="card2">
+                <h2>Miscellaneous</h2>
+                <p>
+                    <a href="https://www.dd-wrt.com/" target="_blank" rel="noopener noreferrer"><button>DD-WRT</button></a>
+                    <a href="https://www.clearos.com/" target="_blank" rel="noopener noreferrer"><button>ClearOS</button></a>
+                    <a href="/home/jesse/github/jesseDev3/gtg/templates/wf-mgmt.html" target="_blank" rel="noopener noreferrer"><button>WF-MGMT</button></a>
+                </p>
+            </div>
+    </main>
+    <footer>
+        &copy; 2025 G2G. All rights reserved.
+    </footer>
+    <script>
+        const dropdownTriggers = document.querySelectorAll('[id^="dropdown-trigger"]');
+const dropdownMenus = document.querySelectorAll('[id^="dropdown-menu"]');
+
+dropdownTriggers.forEach((trigger, index) => {
+    const menu = dropdownMenus[index];
+
+    trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        const isVisible = menu.style.display === 'block';
+        dropdownMenus.forEach((m) => (m.style.display = 'none')); // Close other menus
+        menu.style.display = isVisible ? 'none' : 'block';
+    });
+});
+
+document.addEventListener('click', (event) => {
+    dropdownTriggers.forEach((trigger, index) => {
+        const menu = dropdownMenus[index];
+        if (!trigger.contains(event.target) && !menu.contains(event.target)) {
+            menu.style.display = 'none';
+        }
+    });
+});
+    </script>
+</body>
+</html>
