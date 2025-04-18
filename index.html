@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jlabsApp"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLabs</title>
+    <style>
+        .banner {
+            background-image: url('https://cdn.pixabay.com/photo/2021/09/12/07/58/banner-6617553_960_720.jpg');
+            height: 75px;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        header {
+            height: 20px;
+            display: flex;
+            justify-content: space-between; 
+            background-color: #47cc4c;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            z-index: 1000;
+        }
+        .dropdown-menu {
+            display: block;
+        }
+        main {
+            gap: 20px;
+            flex-wrap: wrap;
+            display: flex;
+            padding: 20px;
+            background-color: #d111a1;
+            min-height: calc(100vh - 200px); /* Adjust for header and footer */
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #47cc4c;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>Welcome to JLabs</h1>
+    </div>
+    <nav class="navbar">
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">JLabs Logo</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
+                <a href="links.html">Links</a>
+                <a href="linux.html">Linux</a>
+                <a href="kube.md">Kubernetes</a>
+                <a href="Rhel9.md">RHEL 9</a>
+                <a href="Tyme/tyme.md">Tyme Doc</a>
+                <a href="Tyme/tyme.html">Tyme</a>
+            </div>
+        </div>
+        <div class="search-bar" ng-controller="SearchController as searchCtrl">
+            <input type="text" placeholder="Search..." ng-model="searchCtrl.query" ng-keypress="searchCtrl.handleKeyPress($event)">
+        </div>
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('cartMenu')">Cart</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('cartMenu')" class="dropdown-menu">
+                <a href="#">View Cart</a>
+                <a href="#">Checkout</a>
+                <a href="#">Order History</a>
+            </div>
+        </div>
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('settingsMenu')">Settings</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('settingsMenu')" class="dropdown-menu">
+                <a href="#">Profile</a>
+                <a href="#">Preferences</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </nav>
+    
+    <header>
+    </header>
+    <main>
+    </main>
+    <footer>
+        &copy; 2025 JLabs. All rights reserved.
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        angular.module('jlabsApp', [])
+            .controller('DropdownController', function() {
+                this.menus = {};
+                this.toggleMenu = function(menuId) {
+                    this.menus[menuId] = !this.menus[menuId];
+                };
+                this.isMenuOpen = function(menuId) {
+                    return !!this.menus[menuId];
+                };
+            })
+            .controller('SearchController', function() {
+                this.query = '';
+                this.handleKeyPress = function(event) {
+                    if (event.key === 'Enter') {
+                        console.log('Search query:', this.query);
+                        // Add your search logic here
+                    }
+                };
+            });
+    </script>
+</body>
+</html>
