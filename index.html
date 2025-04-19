@@ -1,3 +1,4 @@
+
 <html lang="en" ng-app="jlabsApp">
 <head>
     <meta charset="UTF-8">
@@ -15,6 +16,17 @@
             <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
                 <a href="links.html">Links</a>
                 <a href="linux.html">Linux</a>
+                <a href="kube.md">Kubernetes</a>
+                <a href="Rhel9.md">RHEL 9</a>
+                <a href="Tyme/tyme.md">Tyme Doc</a>
+                <a href="Tyme/tyme.html">Tyme</a>
+            </div>
+        </div>
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">Index</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
+                <a href="cart.html">Cart</a> // hover over to see stack. java, kotlin, etc.
+                <a href="tyme.html">Linux</a>
                 <a href="kube.md">Kubernetes</a>
                 <a href="Rhel9.md">RHEL 9</a>
                 <a href="Tyme/tyme.md">Tyme Doc</a>
@@ -45,11 +57,17 @@
                 <a href="#">Logout</a>
             </div>
         </div>
-    </nav>
-    
+    </nav>    
     <header>
+
     </header>
     <main>
+        <h2></h2>
+        <div ng-if="searchCtrl.query">
+            <p>Results for: {{ searchCtrl.query }}</p>
+
+        </div>
+        
     </main>
     <footer>
         &copy; 2025 JLabs. All rights reserved.
