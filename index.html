@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="search-bar" ng-controller="SearchController as searchCtrl">
-            <input type="text" placeholder="Search..." ng-model="searchCtrl.query" ng-keypress="searchCtrl.handleKeyPress($event)">
+            <input type="text" placeholder="Checked out to me..." ng-model="searchCtrl.query" ng-keypress="searchCtrl.handleKeyPress($event)">
         </div>
         <div class="dropdown" ng-controller="CartController as cartCtrl">
             <button ng-click="cartCtrl.toggleMenu()">Cart ({{ cartCtrl.items.length }})</button>
