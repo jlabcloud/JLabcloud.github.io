@@ -1,4 +1,3 @@
-    <script>
         angular.module('jlabsApp', [])
             .controller('DropdownController', function() {
                 this.menus = {};
@@ -18,4 +17,3 @@
                     }
                 };
             });
-    </script>
