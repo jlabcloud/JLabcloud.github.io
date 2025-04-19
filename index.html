@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" ng-app="jlabsApp">
 <head>
     <meta charset="UTF-8">
@@ -25,12 +24,17 @@
         <div class="search-bar" ng-controller="SearchController as searchCtrl">
             <input type="text" placeholder="Search..." ng-model="searchCtrl.query" ng-keypress="searchCtrl.handleKeyPress($event)">
         </div>
-        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
-            <button ng-click="dropdownCtrl.toggleMenu('cartMenu')">Cart</button>
-            <div ng-show="dropdownCtrl.isMenuOpen('cartMenu')" class="dropdown-menu">
-                <a href="#">View Cart</a>
-                <a href="#">Checkout</a>
-                <a href="#">Order History</a>
+        <div class="dropdown" ng-controller="CartController as cartCtrl">
+            <button ng-click="cartCtrl.toggleMenu()">Cart ({{ cartCtrl.items.length }})</button>
+            <div ng-show="cartCtrl.isMenuOpen()" class="dropdown-menu">
+                <div ng-if="cartCtrl.items.length === 0">Your cart is empty.</div>
+                <ul>
+                    <li ng-repeat="item in cartCtrl.items">
+                        {{ item.name }} - ${{ item.price }}
+                        <button ng-click="cartCtrl.removeItem($index)">Remove</button>
+                    </li>
+                </ul>
+                <a href="#" ng-if="cartCtrl.items.length > 0">Checkout</a>
             </div>
         </div>
         <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
@@ -69,6 +73,31 @@
             console.log('Search query:', this.query);
             // Add your search logic here
         }
+    };
+})
+.controller('CartController', function() {
+    this.items = [
+        { name: 'Item 1', price: 10.99 },
+        { name: 'Item 2', price: 5.49 },
+        { name: 'Item 3', price: 20.00 }
+    ];
+
+    this.menuOpen = false;
+
+    this.toggleMenu = function() {
+        this.menuOpen = !this.menuOpen;
+    };
+
+    this.isMenuOpen = function() {
+        return this.menuOpen;
+    };
+
+    this.addItem = function(item) {
+        this.items.push(item);
+    };
+
+    this.removeItem = function(index) {
+        this.items.splice(index, 1);
     };
 });
     </script>
