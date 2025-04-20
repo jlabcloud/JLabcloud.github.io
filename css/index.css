@@ -23,7 +23,7 @@
             display: flex;
             background-color: #47cc4c;
             color: white;
-            align-items: center;
+            align-items: left;
             padding: 10px 20px;
             gap: 20px;
         }
