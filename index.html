@@ -61,45 +61,81 @@
             </div>
     </nav>    
     <header>
-        <a href="https://mytime.target.com/" target="_blank" rel="noopener noreferrer"><button>mt</button>
-        <a href="https://wd5.myworkday.com/target" target="_blank" rel="noopener noreferrer"><button>wd</button></a>
-        <a href="https://greenfield.target.com" target="_blank" rel="noopener noreferrer"><button>grnf</button></a>
-        <a href="https://mickra.target.com" target="_blank" rel="noopener noreferrer"><button>m</button></a>
-        <a href="https://salesforce.target.com" target="_blank" rel="noopener noreferrer"><button>Sf</button></a>
-        <a href="https://servicenow.target.com" target="_blank" rel="noopener noreferrer"><button>Sn</button></a> 
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">QWKlinks</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
+                <a href="https://mytime.target.com/">MyTime</a>
+                <a href="https://wd5.myworkday.com/target">Workday</a>
+                <a href="https://greenfield.target.com">Greenfield</a>
+                <a href="https://mickra.target.com">Mickra</a>
+                <a href="https://salesforce.target.com">Salesforce</a>
+                <a href="https://servicenow.target.com">ServiceNow</a>
+            </div>
+        </div>
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">TGT Opn Src</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
+                <a href="https://github.com/target">TGT Github</a>
+                <a href="https://opensource.target.com">Open Source</a>
+                <a href="https://tech.target.com/open-source">TGT Tech</a>
+                <a href="https://opensource.target.com/security">TGT CFC</a>
+            </div>
+        </div>
     </header>
     <main>
-        <div class="card">
+        <div class="card-container">
+            <div class="card">
                 <h2>Linux Distros</h2>
                 <select onchange="location = this.value;">
-                <option value="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat</option>
-                <option value="https://www.centos.org/">CentOS</option>
-                <option value="https://www.debian.org/">Debian</option>
-                <option value="https://www.ubuntu.com/">Ubuntu</option>
-                <option value="https://www.suse.com/">SUSE</option>
-                <option value="https://www.fedoraproject.org/">Fedora</option>
-                <option value="https://www.kali.org/">Kali</option>
-                <option value="https://www.freebsd.org/">FreeBSD</option>
-            </select>
-            <p>
-                <a href="https://github.com/JesseDev3/linux/blob/main/README.md"><button>KwkStrt</button></a>
-
-            </p>
-        </div>
+                    <option value="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat</option>
+                    <option value="https://www.centos.org/">CentOS</option>
+                    <option value="https://www.debian.org/">Debian</option>
+                    <option value="https://www.ubuntu.com/">Ubuntu</option>
+                    <option value="https://www.suse.com/">SUSE</option>
+                    <option value="https://www.fedoraproject.org/">Fedora</option>
+                    <option value="https://www.kali.org/">Kali</option>
+                    <option value="https://www.freebsd.org/">FreeBSD</option>
+                </select>
+                <p>
+                    <a href="https://github.com/JesseDev3/linux/blob/main/README.md"><button>QWKstrt</button></a>
+                </p>
+            </div>
             <div class="card">
                 <h2>Dev Tools</h2>
-                    <select onchange="location = this.value;">
-                        <option value="https://react.dev/learn">Podman</option>
-                        <option value="https://react.dev/learn">React</option>
-                        <option value="https://go.dev/">Go</option>
-                        <option value="https://k8s.io">K8s</option>
-                        <option value="https://k8s.gcr.io">GCR</option>
-                        <option value="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#api-overview-v1">API Overview</option>
-                    </select>
-                    <p>
-                        <a href="https://it-tools.tech/"><button>IT Tools</button></a>
-                    </p>
+                <select onchange="location = this.value;">
+                    <option value="https://react.dev/learn">Podman</option>
+                    <option value="https://react.dev/learn">React</option>
+                    <option value="https://go.dev/">Go</option>
+                    <option value="https://k8s.io">K8s</option>
+                    <option value="https://k8s.gcr.io">GCR</option>
+                    <option value="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#api-overview-v1">API Overview</option>
+                </select>
+                <p>
+                    <a href="https://it-tools.tech/"><button>IT Tools</button></a>
+                </p>
             </div>
+            <div class="card">
+                <h2>Dev Tools</h2>
+                <select onchange="location = this.value;">
+                    <option value="https://react.dev/learn">Podman</option>
+                    <option value="https://react.dev/learn">React</option>
+                    <option value="https://go.dev/">Go</option>
+                    <option value="https://k8s.io">K8s</option>
+                    <option value="https://k8s.gcr.io">GCR</option>
+                    <option value="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#api-overview-v1">API Overview</option>
+                </select>
+            </div>
+            <div class="card">
+                <h2>Dev Tools</h2>
+                <select onchange="location = this.value;">
+                    <option value="https://react.dev/learn">Podman</option>
+                    <option value="https://react.dev/learn">React</option>
+                    <option value="https://go.dev/">Go</option>
+                    <option value="https://k8s.io">K8s</option>
+                    <option value="https://k8s.gcr.io">GCR</option>
+                    <option value="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#api-overview-v1">API Overview</option>
+                </select>
+                </div>
             <div class="card">
                 <h2>Networking</h2>
                 <p>
@@ -116,6 +152,7 @@
                     <a href="https://www.clearos.com/" target="_blank" rel="noopener noreferrer"><button>ClearOS</button></a>
                 </p>
             </div>
+        </div>
     </main>
     <footer>
         &copy; 2025 JLabs. All rights reserved.
