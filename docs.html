@@ -16,9 +16,8 @@
             <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">JLabs Logo</button>
             <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
                 <a href="index.html">Home</a>
-                <a href="docs.html">Docs</a>
                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/">MDN Web Docs -Move</a>
-                <a href="links.html">Links</a>
+                <a href="links.html">In Progress</a>
                 <a href="linux.html">Linux</a>
                 <a href="kube.md">Kubernetes</a>
                 <a href="Rhel9.md">RHEL 9</a>
@@ -60,18 +59,67 @@
                 <a href="#">Preferences</a>
                 <a href="#">Logout</a>
             </div>
-        </div>
     </nav>    
     <header>
-
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">QWKlinks</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
+                <a href="https://mytime.target.com/">MyTime</a>
+                <a href="https://wd5.myworkday.com/target">Workday</a>
+                <a href="https://greenfield.target.com">Greenfield</a>
+                <a href="https://mickra.target.com">Mickra</a>
+                <a href="https://salesforce.target.com">Salesforce</a>
+                <a href="https://servicenow.target.com">ServiceNow</a>
+            </div>
+        </div>
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">TGT Opn Src</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
+                <a href="https://github.com/target">TGT Github</a>
+                <a href="https://opensource.target.com">Open Source</a>
+                <a href="https://tech.target.com/open-source">TGT Tech</a>
+                <a href="https://opensource.target.com/security">TGT CFC</a>
+            </div>
+        </div>
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">QWKlinks</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
+                <a href="https://mytime.target.com/">MyTime</a>
+            </div>
+        </div>
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">QWKlinks</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
+                <a href="https://mytime.target.com/">MyTime</a>
+            </div>
+        </div>
     </header>
     <main>
-        <h2></h2>
-        <div ng-if="searchCtrl.query">
-            <p>Results for: {{ searchCtrl.query }}</p>
-
-        </div>
-        
+        <section>
+            <h2>Welcome to JLabs</h2>
+            <p>
+                This is a simple web application that demonstrates the use of AngularJS for creating a dynamic and interactive user interface. The application includes a navigation bar with dropdown menus, a search bar, and a shopping cart feature.
+            </p>
+            <h2>Setup</h2>
+            <ul>
+                <li>Create user email</li>
+                <li>Create GitHub account</li>
+                <li>Run curl command from GitHub page for OS for any missing dependencies</li>
+                <pre><code class="language-bash"></code>
+$ curl -fsSL https://raw.githubusercontent.com/JesseDev3/linux/refs/heads/main/el9_setup.sh -o el9_setup.sh
+$ sudo bash el9_setup.sh
+                </code></pre>
+                <li> ** Working on the One curl command to rule them all **</li>
+                <li>Set up SSH key</li>
+                <li>Create a repository</li>
+                <li>Clone the repository to a destination such as OneDrive, Google Drive, or Dropbox</li>
+            </ul>
+            <p>
+                This application is designed to be a starting point for your own projects. You can customize it by adding your own features, styles, and content. The code is organized in a way that makes it easy to understand and modify.
+                If hosting files such as sharepoint, OneDrive, or Google Drive, you can use the following command to create a shareable link:
+            </p>
+                <pre><code class="language-bash">curl -X POST -</code></pre>
+        </section>
     </main>
     <footer>
         &copy; 2025 JLabs. All rights reserved.
