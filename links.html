@@ -1,4 +1,6 @@
-<html lang="en">
+<!DOCTYPE html>
+<html dir="ltr">
+<html lang="en" ng-app="jlabsApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,13 +8,15 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-        <div class="banner">
-            <h1>Welcome to JLabs</h1>
-        </div>
-    <header> 
-        <div class="dropdown">
-            <a id="dropdown-trigger"><button>JLabs Logo</button></a>
-            <div id="dropdown-menu" class="dropdown-menu">
+    <div class="banner">
+        <h1>Welcome to JLabs</h1>
+    </div>
+    <nav class="navbar">
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">JLabs Logo</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
+                <a href="https://jlabcloud.github.io">Home</a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/">MDN Web Docs -Move</a>
                 <a href="links.html">Links</a>
                 <a href="linux.html">Linux</a>
                 <a href="kube.md">Kubernetes</a>
@@ -21,28 +25,46 @@
                 <a href="Tyme/tyme.html">Tyme</a>
             </div>
         </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search..." onkeypress="if(event.key === 'Enter') { /* Add your search logic here */ }">
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">Index</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
+                <a href="cart.html">Cart</a> // hover over to see stack. java, kotlin, etc.
+                <a href="tyme.html">Linux</a>
+                <a href="kube.md">Kubernetes</a>
+                <a href="Rhel9.md">RHEL 9</a>
+                <a href="Tyme/tyme.md">Tyme Doc</a>
+                <a href="Tyme/tyme.html">Tyme</a>
+            </div>
         </div>
-            <div class="dropdown">
-                <a id="dropdown-trigger"><button>Cart</button></a>
-                <div id="dropdown-menu" class="dropdown-menu">
-                    <a href="#">View Cart</a>
-                    <a href="#">Checkout</a>
-                    <a href="#">Order History</a>
-                </div>
-            </div>  
-        <div class="dropdown">
-            <a id="dropdown-trigger"><button>Settings</button></a>
-            <div id="dropdown-menu" class="dropdown-menu">
+        <div class="search-bar" ng-controller="SearchController as searchCtrl">
+            <input type="text" placeholder="Checked out to me..." ng-model="searchCtrl.query" ng-keypress="searchCtrl.handleKeyPress($event)">
+        </div>
+        <div class="dropdown" ng-controller="CartController as cartCtrl">
+            <button ng-click="cartCtrl.toggleMenu()">Cart ({{ cartCtrl.items.length }})</button>
+            <div ng-show="cartCtrl.isMenuOpen()" class="dropdown-menu">
+                <div ng-if="cartCtrl.items.length === 0">Your cart is empty.</div>
+                <ul>
+                    <li ng-repeat="item in cartCtrl.items">
+                        {{ item.name }} - ${{ item.price }}
+                        <button ng-click="cartCtrl.removeItem($index)">Remove</button>
+                    </li>
+                </ul>
+                <a href="#" ng-if="cartCtrl.items.length > 0">Checkout</a>
+            </div>
+        </div>
+        <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
+            <button ng-click="dropdownCtrl.toggleMenu('settingsMenu')">Settings</button>
+            <div ng-show="dropdownCtrl.isMenuOpen('settingsMenu')" class="dropdown-menu">
                 <a href="#">Profile</a>
                 <a href="#">Preferences</a>
                 <a href="#">Logout</a>
             </div>
         </div>
+    </nav>    
+    <header>
+
     </header>
     <main>
-        <div style="display: flex; gap: 20px; flex-wrap: wrap;">
         <div class="card">
             <h2>Work</h2>
             <p>
@@ -102,28 +124,48 @@
     <footer>
         &copy; 2025 G2G. All rights reserved.
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script>
-        const dropdownTriggers = document.querySelectorAll('[id^="dropdown-trigger"]');
-const dropdownMenus = document.querySelectorAll('[id^="dropdown-menu"]');
-
-dropdownTriggers.forEach((trigger, index) => {
-    const menu = dropdownMenus[index];
-
-    trigger.addEventListener('click', (event) => {
-        event.preventDefault();
-        const isVisible = menu.style.display === 'block';
-        dropdownMenus.forEach((m) => (m.style.display = 'none')); // Close other menus
-        menu.style.display = isVisible ? 'none' : 'block';
-    });
-});
-
-document.addEventListener('click', (event) => {
-    dropdownTriggers.forEach((trigger, index) => {
-        const menu = dropdownMenus[index];
-        if (!trigger.contains(event.target) && !menu.contains(event.target)) {
-            menu.style.display = 'none';
+        angular.module('jlabsApp', [])
+.controller('DropdownController', function() {
+    this.menus = {};
+    this.toggleMenu = function(menuId) {
+        this.menus[menuId] = !this.menus[menuId];
+    };
+    this.isMenuOpen = function(menuId) {
+        return !!this.menus[menuId];
+    };
+})
+.controller('SearchController', function() {
+    this.query = '';
+    this.handleKeyPress = function(event) {
+        if (event.key === 'Enter') {
+            console.log('Search query:', this.query);
+            // Add your search logic here
         }
-    });
+    };
+})
+.controller('CartController', function() {
+    this.items = [
+    ];
+
+    this.menuOpen = false;
+
+    this.toggleMenu = function() {
+        this.menuOpen = !this.menuOpen;
+    };
+
+    this.isMenuOpen = function() {
+        return this.menuOpen;
+    };
+
+    this.addItem = function(item) {
+        this.items.push(item);
+    };
+
+    this.removeItem = function(index) {
+        this.items.splice(index, 1);
+    };
 });
     </script>
 </body>

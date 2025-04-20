@@ -6,7 +6,11 @@
             align-items: center;
             justify-content: center;
             color: white;
-        }        
+        }  
+        .banner h1 {
+            font-size: 2em;
+            margin: 0;
+        }      
         header {
             height: 20px;
             display: flex;
