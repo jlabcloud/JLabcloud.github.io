@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" ng-app="jlabsApp">
+<html dir="ltr">
+<html lang="en" ng-app="jlabsApp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <div ng-include="'header.html'"></div>
+    <div ng-include="'header.html'" ng-if="headerLoaded"></div>
     <script>
         angular.module('jlabsApp').run(function($rootScope, $http) {
             $http.get('header.html')
