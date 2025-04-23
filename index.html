@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+
+<!--
     <script>
         angular.module('jlabsApp').run(function($rootScope, $http) {
             $http.get('header.html')
@@ -19,8 +21,10 @@
                     console.error('Error loading header.html:', error);
                 });
         });
-    </script>
+    </script> 
     <div ng-include='header.html'></div>
+-->
+    
     <nav class="navbar">
         <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
             <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">QWKlinks</button>
