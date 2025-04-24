@@ -33,8 +33,7 @@
             <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">JLabs Logo</button>
             <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
                 <a href="index.html">Home</a>
-                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/">MDN Web Docs -Move</a>
-                <a href="links.html">In Progress</a>
+                <a href="lynx.html">Lynx</a>
                 <a href="linux.html">Linux</a>
                 <a href="kube.md">Kubernetes</a>
                 <a href="Rhel9.md">RHEL 9</a>
@@ -45,7 +44,7 @@
         <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
             <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">Index</button>
             <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
-                <a href="cart.html">Cart</a> // hover over to see stack. java, kotlin, etc.
+                <a href="cart.html">Cart</a> <!-- add hover after for lang ie kotlin-->
                 <a href="tyme.html">Linux</a>
                 <a href="kube.md">Kubernetes</a>
                 <a href="Rhel9.md">RHEL 9</a>
@@ -113,10 +112,12 @@
     </header>
     <main>
         <a href="https://github.com/jlabcloud">Github</a>
-        <a href="https://github.com/jlabcloud/JLabcloud.github.io/blob/main/index-inpr.html">Github index in progress</a>
+        <a href="https://github.com/jlabcloud/JLabcloud.github.io/blob/main/index-inpr.html">Github index</a>
         <div class="card-container">
             <div class="card">
-                <h2>Linux Distros</h2>
+                <a href="https://www.linux.org">
+                    <img src="https://www.kernel.org/theme/images/logos/favicon.png" alt="Linux Distros logo" />
+                  </a>       
                 <select onchange="location = this.value;">
                     <option value="" disabled selected>Select a Linux Distro</option>
                     <option value="https://docs.oracle.com/en/operating-systems/oracle-linux/9/">Red Hat</option>
@@ -133,42 +134,55 @@
                 </p>
             </div>
             <div class="card">
-                <h2>Dev Tools</h2>
+                <a href="https://developer.mozilla.org/en-US/">
+                    <img src="https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png" alt="MDN Web Docs" />
+                  </a>       
                 <select onchange="location = this.value;">
                     <option value="" disabled selected>Select a Tool</option>
-                    <option value="https://react.dev/learn">Podman</option>
-                    <option value="https://react.dev/learn">React</option>
-                    <option value="https://go.dev/">Go</option>
-                    <option value="https://k8s.io">K8s</option>
-                    <option value="https://k8s.gcr.io">GCR</option>
-                    <option value="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#api-overview-v1">API Overview</option>
-                </select>
-                <p>
-                    <a href="https://it-tools.tech/"><button>IT Tools</button></a>
-                </p>
+                    <option value="https://developer.mozilla.org/en-US/">MDN Home</option>
+                    <option value="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content">HTML</option>
+                    <option value="https://developer.mozilla.org/en-US/docs/WebAssembly">WASM</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>         
             </div>
             <div class="card">
-                <h2>Dev Tools</h2>
+                <a href="https://www.w3schools.com">
+                    <img src="https://www.w3schools.com/favicon-32x32.png" alt="W3Schools" />
+                  </a> 
                 <select onchange="location = this.value;">
                     <option value="" disabled selected>Select a Tool</option>
-                    <option value="https://react.dev/learn">Podman</option>
-                    <option value="https://react.dev/learn">React</option>
-                    <option value="https://go.dev/">Go</option>
-                    <option value="https://k8s.io">K8s</option>
-                    <option value="https://k8s.gcr.io">GCR</option>
-                    <option value="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#api-overview-v1">API Overview</option>
-                </select>
+                    <option value="https://www.w3schools.com">Home</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>         
             </div>
             <div class="card">
-                <h2>Dev Tools</h2>
+                <a href="https://it-tools.tech">
+                    <img src="https://it-tools.tech/favicon-32x32.png" alt="it-tools logo" />
+                  </a> 
                 <select onchange="location = this.value;">
                     <option value="" disabled selected>Select a Tool</option>
                     <option value="https://react.dev/learn">Podman</option>
                     <option value="https://react.dev/learn">React</option>
                     <option value="https://go.dev/">Go</option>
                     <option value="https://k8s.io">K8s</option>
+                    <option value="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#api-overview-v1">K8s API</option>
                     <option value="https://k8s.gcr.io">GCR</option>
-                    <option value="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#api-overview-v1">API Overview</option>
+                    <option value="https://angular.dev">Angular</option>
+                    <option value="https://www.ansible.com/">Ansible</option>
+                    <option value="https://www.terraform.io/">Terraform</option>
+                    <option value="https://www.rust-lang.org/">Rust</option>
+                    <option value="https://www.ruby-lang.org/">Ruby</option>
+                    <option value="https://www.perl.org/">Perl</option>
+                    <option value="https://www.scala-lang.org/">Scala</option>
+                    <option value="https://www.swift.org/">Swift</option>
+
+    
                 </select>
                 </div>
             <div class="card">
