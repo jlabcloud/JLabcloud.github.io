@@ -1,0 +1,12 @@
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\bin\Debug\net8.0\JLabReactTS.ServiceDefaults.deps.json
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\bin\Debug\net8.0\JLabReactTS.ServiceDefaults.dll
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\bin\Debug\net8.0\JLabReactTS.ServiceDefaults.pdb
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\obj\Debug\net8.0\JLabReactTS.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\obj\Debug\net8.0\JLabReactTS.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\obj\Debug\net8.0\JLabReactTS.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\obj\Debug\net8.0\JLabReactTS.ServiceDefaults.AssemblyInfo.cs
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\obj\Debug\net8.0\JLabReactTS.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\obj\Debug\net8.0\JLabReactTS.ServiceDefaults.dll
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\obj\Debug\net8.0\refint\JLabReactTS.ServiceDefaults.dll
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\obj\Debug\net8.0\JLabReactTS.ServiceDefaults.pdb
+C:\Users\jesse\OneDrive\JLabcloud\JLabReactTS\JLabReactTS.ServiceDefaults\obj\Debug\net8.0\ref\JLabReactTS.ServiceDefaults.dll
