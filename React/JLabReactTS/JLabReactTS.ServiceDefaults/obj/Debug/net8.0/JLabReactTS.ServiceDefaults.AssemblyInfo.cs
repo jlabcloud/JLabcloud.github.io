@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JLabReactTS.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0165a813096f7945caf862982a3a74a0af3dc660")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb45e93eaa6604d99e6b1b3b7e09fea9d60b43aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("JLabReactTS.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JLabReactTS.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

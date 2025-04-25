@@ -7,5 +7,5 @@ namespace Projects;
 [global::System.Diagnostics.DebuggerDisplay("Type = {GetType().Name,nq}, ProjectPath = {ProjectPath}")]
 public class JLabReactTS_Server : global::Aspire.Hosting.IProjectMetadata
 {
-    public string ProjectPath => """C:\Users\jesse\OneDrive\JLabcloud\JLabcloud.github.io\React\JLabReactTS\JLabReactTS.Server\JLabReactTS.Server.csproj""";
+    public string ProjectPath => """/home/jesse/github/JLabcloud.github.io/React/JLabReactTS/JLabReactTS.Server/JLabReactTS.Server.csproj""";
 }

@@ -8,5 +8,5 @@ namespace Projects;
 public class JLabReactTS_AppHost
 {
     private JLabReactTS_AppHost() { }
-    public static string ProjectPath => """C:\Users\jesse\OneDrive\JLabcloud\JLabcloud.github.io\React\JLabReactTS\JLabReactTS.AppHost""";
+    public static string ProjectPath => """/home/jesse/github/JLabcloud.github.io/React/JLabReactTS/JLabReactTS.AppHost""";
 }
