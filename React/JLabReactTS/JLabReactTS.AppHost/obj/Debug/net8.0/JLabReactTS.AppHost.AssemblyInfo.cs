@@ -10,21 +10,10 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("b708b44f-54f0-4dc0-936a-cee2fef0199e")]
-[assembly: System.Reflection.AssemblyMetadata("dcpclipath", ("/home/jesse/.nuget/packages/aspire.hosting.orchestration.linux-x64/9.0.0/tools/dc" +
-    "p"))]
-[assembly: System.Reflection.AssemblyMetadata("dcpextensionpaths", ("/home/jesse/.nuget/packages/aspire.hosting.orchestration.linux-x64/9.0.0/tools/ex" +
-    "t/"))]
-[assembly: System.Reflection.AssemblyMetadata("dcpbinpath", ("/home/jesse/.nuget/packages/aspire.hosting.orchestration.linux-x64/9.0.0/tools/ex" +
-    "t/bin/"))]
-[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "/home/jesse/github/JLabcloud.github.io/React/JLabReactTS/JLabReactTS.AppHost")]
-[assembly: System.Reflection.AssemblyMetadata("apphostprojectname", "JLabReactTS.AppHost.csproj")]
-[assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", ("/home/jesse/.nuget/packages/aspire.dashboard.sdk.linux-x64/9.0.0/tools/Aspire.Das" +
-    "hboard"))]
 [assembly: System.Reflection.AssemblyCompanyAttribute("JLabReactTS.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb45e93eaa6604d99e6b1b3b7e09fea9d60b43aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f87a402f128286498f70c1ace721ced964544a89")]
 [assembly: System.Reflection.AssemblyProductAttribute("JLabReactTS.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JLabReactTS.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

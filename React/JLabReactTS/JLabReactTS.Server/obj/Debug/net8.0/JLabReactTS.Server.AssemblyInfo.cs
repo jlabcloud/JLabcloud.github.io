@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JLabReactTS.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb45e93eaa6604d99e6b1b3b7e09fea9d60b43aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f87a402f128286498f70c1ace721ced964544a89")]
 [assembly: System.Reflection.AssemblyProductAttribute("JLabReactTS.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JLabReactTS.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
