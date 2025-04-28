@@ -44,7 +44,6 @@
         <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
             <button ng-click="dropdownCtrl.toggleMenu('logoMenu')">Index</button>
             <div ng-show="dropdownCtrl.isMenuOpen('logoMenu')" class="dropdown-menu">
-                <a href="html/cart.html" title="Kotlin">Cart</a>
                 <a href="html/tyme.html">Linux</a>
                 <a href="html/kube.md">Kubernetes</a>
                 <a href="html/Rhel9.md">RHEL 9</a>
@@ -65,7 +64,7 @@
                         <button ng-click="cartCtrl.removeItem($index)">Remove</button>
                     </li>
                 </ul>
-                <a href="#" ng-if="cartCtrl.items.length > 0">Checkout</a>
+                <a href="html/cart.html" ng-if="cartCtrl.items.length > 0">Checkout</a>
             </div>
         </div>
         <div class="dropdown" ng-controller="DropdownController as dropdownCtrl">
