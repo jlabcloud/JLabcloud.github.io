@@ -1,4 +1,4 @@
-- Credit to <a href="https://www.youtube.com/@harunaadoga">Haruna Adoga</a>
+- Credit to <a href="https://www.youtube.com/@harunaadoga" target="_blank" rel="noopener noreferrer">Haruna Adoga</a>
 # Section1: Understand & Use Essential Linux Tools
 ## Task 1: Text search and Archive - man pages
 - 1.1 Find the string "listen" in /etc/httpd/conf/httpd.conf and save the output to /root/web.Text
